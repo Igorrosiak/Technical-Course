@@ -2,41 +2,25 @@ package br.com.senai.model;
 
 public class Pagamento {
 
-    private String cartão;
-    private String boleto;
+    private String fdpg;
     private int valor;
 
-    public Pagamento(String cartão, String boleto, int valor) {
-        this.cartão = cartão;
-        this.boleto = boleto;
-        this.valor = valor;
+    public String getFdpg() {
+        return fdpg;
     }
-
-    public String getCartão() {
-        return cartão;
-    }
-    public void setCartão(String cartão) {
-        this.cartão = cartão;
-    }
-    public String getBoleto() {
-        return boleto;
-    }
-    public void setBoleto(String boleto) {
-        this.boleto = boleto;
+    public void setFdpg(String fdpg) {
+        this.fdpg = fdpg;
     }
     public int getValor() {
         return valor;
     }
     public void setValor(int valor) {
-        this.valor = valor;
+        this.valor = 4000;
     }
 
     @Override
     public String toString() {
-        return "Forma de Pagamento{" +
-                "cartão='" + cartão + '\'' +
-                ", boleto='" + boleto + '\'' +
-                ", valor=" + valor +
-                '}';
+        return "\nForma de Pagamento: " + fdpg +
+                "\nValor: " + valor;
     }
 }

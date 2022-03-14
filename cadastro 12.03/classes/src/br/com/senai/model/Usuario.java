@@ -7,6 +7,7 @@ public class Usuario {
     private String telefone;
     private String endereço;
     private String cpf;
+    private Pagamento pagamento;
 
     //construtor
     public Usuario(){
@@ -48,6 +49,18 @@ public class Usuario {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+    public Pagamento getPagamento() {
+        return pagamento;
+    }
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
+    }
+
+    public void setPagamento(String fdpg, int valor) {
+        Pagamento pagamento = new Pagamento();
+        pagamento.setFdpg(fdpg);
+        pagamento.setValor(valor);
+    }
 
     //método
     @Override
@@ -57,6 +70,7 @@ public class Usuario {
                 "\nEmail: " + email +
                 "\nTelefone: " + telefone +
                 "\nEndereço: " + endereço +
-                "\nCpf: " + cpf;
+                "\nCpf: " + cpf +
+                "\n\nPagamento: " + pagamento;
     }
 }

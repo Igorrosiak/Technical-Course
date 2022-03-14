@@ -12,7 +12,7 @@ public class Main {
         igor.setTelefone("48-9-8842-5374");
         igor.setEndereço("Servidão Braulina Machado, 51");
         igor.setCpf("129.078.329.22");
-
+        igor.setPagamento("Boleto", 400);
         System.out.println(igor);
     }
 }
