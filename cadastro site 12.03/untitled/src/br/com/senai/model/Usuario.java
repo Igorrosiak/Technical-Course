@@ -11,6 +11,10 @@ public class Usuario {
 
     //construtor
     public Usuario(){
+    }
+
+    //construtor
+    public Usuario(String nome, String email, String telefone, String endereço, String cpf){
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
@@ -56,10 +60,9 @@ public class Usuario {
         this.pagamento = pagamento;
     }
 
-    public void setPagamento(String fdpg, int valor) {
-        Pagamento pagamento = new Pagamento();
-        pagamento.setFdpg(fdpg);
-        pagamento.setValor(valor);
+    public void setPagamento(String fdpg, double valor) {
+        Pagamento pagamento1 = new Pagamento(fdpg, valor);
+        this.pagamento = pagamento1;
     }
 
     //método

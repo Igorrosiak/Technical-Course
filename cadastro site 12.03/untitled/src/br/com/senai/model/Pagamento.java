@@ -2,22 +2,16 @@ package br.com.senai.model;
 
 public class Pagamento {
 
+    //atributos
     private String fdpg;
-    private int valor;
+    private double valor;
 
-    public String getFdpg() {
-        return fdpg;
-    }
-    public void setFdpg(String fdpg) {
+    public Pagamento(String fdpg, double valor){
         this.fdpg = fdpg;
-    }
-    public int getValor() {
-        return valor;
-    }
-    public void setValor(int valor) {
-        this.valor = 4000;
+        this.valor = valor;
     }
 
+    //método
     @Override
     public String toString() {
         return "\nForma de Pagamento: " + fdpg +
