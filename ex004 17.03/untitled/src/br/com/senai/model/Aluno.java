@@ -2,15 +2,16 @@ package br.com.senai.model;
 
 public class Aluno extends Pessoa{
 
-    private String nota1;
-    private String nota2;
+    private double nota1;
+    private double nota2;
+    private double media;
 
-    public Aluno(String nota1, String nota2, String nome){
+    public Aluno(double nota1, double nota2, String nome){
         super(nome);
         this.nota1 = nota1;
         this.nota2 = nota2;
     }
-    public Aluno(String nota1, String nota2){
+    public Aluno(double nota1, double nota2){
         this.nota1 = nota1;
         this.nota2 = nota2;
     }
@@ -19,21 +20,24 @@ public class Aluno extends Pessoa{
     }
     public Aluno(){}
 
-    public  void calcularMedia(double nota1, double nota2){
-        media = (nota1 + nota2 /2);
+    public  void calcularMedia(){
+        media = (nota1 + nota2) / 2;
     }
 
-    public String getNota1() {
+    public double getNota1() {
         return nota1;
     }
-    public void setNota1(String nota1) {
+    public void setNota1(double nota1) {
         this.nota1 = nota1;
     }
-    public String getNota2() {
+    public double getNota2() {
         return nota2;
     }
-    public void setNota2(String nota2) {
+    public void setNota2(double nota2) {
         this.nota2 = nota2;
+    }
+    public double getMedia() {
+        return media;
     }
 
     @Override
@@ -41,6 +45,6 @@ public class Aluno extends Pessoa{
         return "\nAluno: " + super.toString() +
                 "\nNota1: " + nota1 +
                 "\nNota2: " + nota2 +
-                "\nMédia: ";
+                "\nMédia: " + media;
     }
 }

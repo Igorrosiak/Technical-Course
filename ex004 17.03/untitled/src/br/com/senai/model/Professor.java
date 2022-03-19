@@ -4,6 +4,7 @@ public class Professor extends Pessoa{
 
     private double horasTrabalhadas;
     private double valorHora;
+    private double salario;
 
     public Professor(String nome, double horasTrabalhadas, double valorHora){
         super(nome);
@@ -31,12 +32,18 @@ public class Professor extends Pessoa{
     public void setValorHora(double valorHora) {
         this.valorHora = valorHora;
     }
+    public double getSalario() {
+        return salario;
+    }
+    public void setSalario() {
+        salario = getHorasTrabalhadas() * getValorHora();
+    }
 
     @Override
     public String toString() {
         return "\nProfessor: " + super.toString() +
                 "\nHoras Trabalhadas: " + horasTrabalhadas +
-                "Valor por Hora: " + valorHora +
-                "Salário: ";
+                "\nValor por Hora: " + valorHora +
+                "\nSalário: " + salario;
     }
 }
