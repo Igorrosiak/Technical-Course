@@ -8,6 +8,18 @@ public class Caminhao extends Veiculo{
         super(nome, marca);
         this.qtdEixos = qtdEixos;
     }
+    public Caminhao(String nome, Marca marca){
+        super(nome, marca);
+    }
+    public Caminhao(String nome, int qtdEixos){
+        super(nome);
+        this.qtdEixos = qtdEixos;
+    }
+    public Caminhao(Marca marca, int qtdEixos){
+        super(marca);
+        this.qtdEixos = qtdEixos;
+    }
+    public Caminhao(){}
 
     public int getQtdEixos() {
         return qtdEixos;
@@ -18,7 +30,8 @@ public class Caminhao extends Veiculo{
 
     @Override
     public String toString() {
-        return  "Caminhao: " + getNome() +
-                "\nQuantidade de Eixos: " + qtdEixos;
+        return  "\nCaminhao: " + getNome() +
+                "\nQuantidade de Eixos: " + qtdEixos +
+                "\nMarca: " + getMarca();
     }
 }

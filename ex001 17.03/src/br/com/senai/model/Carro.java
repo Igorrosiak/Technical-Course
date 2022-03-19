@@ -8,6 +8,18 @@ public class Carro extends Veiculo{
         super(nome, marca);
         this.portas = portas;
     }
+    public Carro(String nome, int portas){
+        super(nome);
+        this.portas = portas;
+    }
+    public Carro(String nome, Marca marca){
+        super(nome, marca);
+    }
+    public Carro(int portas, Marca marca){
+        super(marca);
+        this.portas = portas;
+    }
+    public Carro(){}
 
     public int getPortas() {
         return portas;
@@ -18,7 +30,7 @@ public class Carro extends Veiculo{
 
     @Override
     public String toString() {
-        return "Carro: " + super.toString() +
-                "\nPortas:" + portas;
+        return  "\nCarro: " + super.toString() +
+                "\nPortas: " + portas;
     }
 }

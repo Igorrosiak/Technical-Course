@@ -9,6 +9,14 @@ public class Veiculo {
         this.nome = nome;
         this.marca = marca;
     }
+    public Veiculo(String nome){
+        this.nome = nome;
+    }
+    public Veiculo(Marca marca){
+        this.marca = marca;
+    }
+    public Veiculo(){}
+
 
     public Marca getMarca() {
         return marca;
@@ -25,7 +33,7 @@ public class Veiculo {
 
     @Override
     public String toString() {
-        return "\nVeiculo: " +
-                "\nNome: " + nome;
+        return  "\nNome: " + nome +
+                "\nMarca: " + marca;
     }
 }

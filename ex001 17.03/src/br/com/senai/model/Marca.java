@@ -25,7 +25,6 @@ public class Marca {
 
     @Override
     public String toString() {
-        return "\nNome da Marca: " + nome +
-                "\nDescricao: " + descricao;
+        return  nome + "\nDescricao: " + descricao;
     }
 }
