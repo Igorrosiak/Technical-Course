@@ -9,6 +9,7 @@ public class Jogador{
         this.nome = nome;
         this.idade = idade;
     }
+    public Jogador(){}
 
     public String getNome() {
         return nome;

@@ -19,8 +19,8 @@ public class Main {
 //        }
 
     Clube flamengo = new Clube("Flamengo");
-    flamengo.getJogadores();
-    flamengo.setJogadores();
+//    flamengo.getJogadores();
+//    flamengo.setJogadores();
 
     System.out.println(flamengo);
 

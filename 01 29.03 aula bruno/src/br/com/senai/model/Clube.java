@@ -33,8 +33,6 @@ public class Clube {
         jogadores.add(new Jogador("Mauricio", 34));
         jogadores.add(new Jogador("Ary", 23));
         jogadores.add(new Jogador("Matheus", 17));
-
-        for (int i=0; i< jogadores.size(); i++);
     };
 
     @Override
