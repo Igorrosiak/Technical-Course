@@ -1,40 +1,34 @@
 package br.com.senai.model;
 
+import java.util.ArrayList;
+
 public class ItensDoPedido {
 
     private double total;
-    private int quantidade;
     private Produto produto;
+    private ArrayList<Produto> produtos;
 
-    public ItensDoPedido(double total, int quantidade, Produto produto){
-        this.total = total;
-        this.quantidade = quantidade;
-        this.produto = produto;
+    public ItensDoPedido(){
+        produtos = new ArrayList<>();
     }
 
     public double getTotal() {
         return total;
     }
-    public void setTotal(double total) {
-        this.total = total;
-    }
-    public int getQuantidade() {
-        return quantidade;
-    }
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-    public Produto getProduto() {
-        return produto;
-    }
-    public void setProduto(Produto produto) {
-        this.produto = produto;
+    public void setProduto(String nome, double preço, int quantidade){
+        Produto produto = new Produto();
+        produto.setNome(nome);
+        produto.setPreço(preço);
+        produto.setQuantidade(quantidade);
+        produtos.add(produto);
+
+        total += preço * quantidade;
     }
 
     @Override
     public String toString() {
-        return "ItensDoPedido:\n" + produto +
-                "Total: " + total +
-                "Quantidade: " + quantidade;
+        return "\nItensDoPedido: " +
+                produtos +
+                "\n\nTotal: " + total;
     }
 }

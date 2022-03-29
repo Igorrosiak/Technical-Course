@@ -33,6 +33,12 @@ public class Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+    public Endereço getEndereço() {
+        return endereço;
+    }
+    public void setEndereço(Endereço endereço) {
+        this.endereço = endereço;
+    }
 
     @Override
     public String toString() {
