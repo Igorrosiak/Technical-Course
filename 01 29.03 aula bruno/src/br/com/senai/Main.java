@@ -8,6 +8,12 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+    Clube flamengo = new Clube("Flamengo");
+    flamengo.setJogadores();
+    flamengo.imprimir();
+    }
+}
+
 //        ArrayList<Pessoa> numero = new ArrayList<Pessoa>();
 //
 //        numero.add(new Pessoa("Anna", 18));
@@ -17,12 +23,3 @@ public class Main {
 //        for (int i=0; i< numero.size(); i++){
 //            System.out.println(numero.get(i));
 //        }
-
-    Clube flamengo = new Clube("Flamengo");
-//    flamengo.getJogadores();
-//    flamengo.setJogadores();
-
-    System.out.println(flamengo);
-
-    }
-}
