@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: linear-gradient(to right, #596158, #6e6c5a);
+}
+
+header{
+    text-align: center;
+}
+
