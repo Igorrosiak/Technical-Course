@@ -42,7 +42,7 @@ public class Biblioteca {
     }
 
     //Array Livros
-    public void setLivros(int idlivro, String titulo, String autor) {
+    public void setLivros(int idlivro, String titulo, Autor autor) {
         Livro livro = new Livro();
         livro.setIdlivro(idlivro);
         livro.setTitulo(titulo);
@@ -50,6 +50,24 @@ public class Biblioteca {
 
         arraylivros.add(livro);
     }
+
+    public void ImprimirIdBiblioteca(){
+        System.out.println("\nID da Biblioteca " + nomebiblioteca + ": " + getIdbiblioteca());
+    }
+
+    public void ImprimirLivrosAutor(Autor autor){
+        System.out.println("Nome do Autor: " + autor + "Livros: ");
+        for (int i = 0; i < arraylivros.size(); i++){
+            if(arraylivros.get(i).getAutor() == autor)
+            System.out.println(arraylivros.get(i).getAutor());
+        }
+    }
+
+    //for(int i=0; i < vetorConta.length; i++)
+    //{
+    //System.out.println("A conta "+vetorConta[i].getIdConta()+ " contém o saldo: R$"+vetorConta[i].getSaldo()+"0 ");
+    //
+    //}
 
     //Impressão (toString)
     public void ImprimirBiblioteca(){

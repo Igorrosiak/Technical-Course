@@ -5,10 +5,10 @@ public class Livro {
     //Atributos
     private int idlivro;
     private String titulo;
-    private String autor;
+    private Autor autor;
 
     //Construtores
-    public Livro(int idlivro, String titulo, String autor) {
+    public Livro(int idlivro, String titulo, Autor autor) {
         this.idlivro = idlivro;
         this.titulo = titulo;
         this.autor = autor;
@@ -16,7 +16,6 @@ public class Livro {
     public Livro(){}
 
     //Getters and Setters
-
     public int getIdlivro() {
         return idlivro;
     }
@@ -29,17 +28,17 @@ public class Livro {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
-    public void setAutor(String autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
 
     //Impressão (toString)
     @Override
     public String toString() {
-        return "ID Livro: " + idlivro +
+        return "\nID Livro: " + idlivro +
                 ", Titulo: " + titulo +
                 ", Autor: " + autor;
     }
