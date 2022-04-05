@@ -13,7 +13,7 @@ public class Main {
         Autor Castro = new Autor("Lucas Catro", new Endereco("3", "88000-003", 3), "002");
         Autor Bandeira = new Autor("Bruno Bandeira", new Endereco("4", "88000-004", 4), "003");
 
-        Biblioteca paranaense = new Biblioteca(1, "Biblioteca Paranaense", new Endereco("1", "88058000", 45));
+        Biblioteca paranaense = new Biblioteca(1, "Biblioteca Paranaense");
         paranaense.setLivros(1, "No Seu Olhar", Castro);
         paranaense.setLivros(2, "Fogo e Sangue", Henrique);
         paranaense.setLivros(3, "E Não Sobrou Nenhum", RickRiordan);
@@ -21,7 +21,7 @@ public class Main {
         paranaense.setLivros(5, "O Último Reino", Castro);
         paranaense.ImprimirBiblioteca();
 
-        Biblioteca catarinense = new Biblioteca(2, "Biblioteca Catarinense", new Endereco("2", "88058010", 50));
+        Biblioteca catarinense = new Biblioteca(2, "Biblioteca Catarinense");
         catarinense.setLivros(1, "It a Coisa", Castro);
         catarinense.setLivros(2, "O Pequeno Principe", Henrique);
         catarinense.setLivros(3, "Percy Jackson, O Ladrão de Raios", RickRiordan);

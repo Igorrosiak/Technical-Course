@@ -9,10 +9,9 @@ public class Biblioteca {
     private String nomebiblioteca;
     private Livro livro;
     private ArrayList<Livro> arraylivros;
-    private Endereco endereco;
 
     //Construtores
-    public Biblioteca(int idbiblioteca, String nomebiblioteca, Endereco endereco) {
+    public Biblioteca(int idbiblioteca, String nomebiblioteca) {
         this.idbiblioteca = idbiblioteca;
         this.nomebiblioteca = nomebiblioteca;
         arraylivros = new ArrayList<>();
@@ -41,12 +40,6 @@ public class Biblioteca {
     public ArrayList<Livro> getLivros() {
         return arraylivros;
     }
-    public Endereco getEndereco() {
-        return endereco;
-    }
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
 
     //Array Livros
     public void setLivros(int idlivro, String titulo, Autor autor) {
@@ -62,11 +55,11 @@ public class Biblioteca {
         System.out.println("\nID da Biblioteca " + nomebiblioteca + ": " + getIdbiblioteca());
     }
 
-    public void ImprimirLivrosAutor(Autor nomeautorbuscado){
-        System.out.println("\nLivros: ");
+    public void ImprimirLivrosAutor(Autor autor){
+        System.out.println("Nome do Autor: " + autor + "Livros: ");
         for (int i = 0; i < arraylivros.size(); i++){
-            if(arraylivros.get(i).getAutor().getNome().equals(nomeautorbuscado.getNome()))
-            System.out.println(arraylivros.get(i).getTitulo()+"\nAutor: "+ arraylivros.get(i).getAutor().getNome());
+            if(arraylivros.get(i).getAutor() == autor)
+            System.out.println(arraylivros.get(i).getAutor());
         }
     }
 
@@ -80,7 +73,6 @@ public class Biblioteca {
     public void ImprimirBiblioteca(){
         System.out.println("\nID Biblioteca: " + idbiblioteca +
                 "\nNome Da Biblioteca: " + nomebiblioteca +
-                "\nEndereço: " + endereco +
                 "\n\nLivros: ");
 
         for (int i = 0; i < arraylivros.size(); i++){
