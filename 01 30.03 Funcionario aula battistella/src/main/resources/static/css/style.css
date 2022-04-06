@@ -4,10 +4,34 @@
 }
 
 body{
-    background-image: linear-gradient(to right, #596158, #6e6c5a);
+    background-image: linear-gradient(to right, #a9c5a6, #a4ce9e);
 }
 
 header{
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 1em;
 }
 
+.navbar-brand{
+    margin-left: 25em;
+}
+
+.head_nav{
+    background-color: azure;
+}
+
+.container{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 4em;
+}
+
+footer{
+    background-color: azure;
+}
+
+.footer{
+    display: block;
+    display: inline-block;
+}
