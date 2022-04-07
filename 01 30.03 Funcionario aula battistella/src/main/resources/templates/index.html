@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap-5.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Funcionário</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap-5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Funcionário</title>
 </head>
+
 <body>
   <div class="head_nav">
     <header>
       <h2> <br> Gerencia de Projetos</h2>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Página Inicial</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"
+      style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+      <a class="navbar-brand" href="/">Página Inicial</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Clientes<span class="sr-only"></span></a>
+            <a class="nav-link" href="/clientes">Clientes<span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projetos</a>
+            <a class="nav-link" href="/projetos">Projetos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Equipe Desenvolvedora</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            <a class="nav-link" href="/equipe">Equipe Desenvolvedora</a>
           </li>
         </ul>
       </div>
@@ -47,19 +41,35 @@
 
   <div class="container">
 
-    <img src="./img/gerente.png">
-    
+    <img src="./img/gerente.png" class="imgindex">
+
   </div>
 
-  
   <footer>
-    <div class="footer"></div>
-      <ul>
-        <li>Localização</li>
-        <li>SENAI CTAI</li>
-        <li>Rodovia SC-401, 3730 - Saco Grande, Florianópolis - SC, 88032005</li>
-        <li>(48) 3239-5800</li> <br>
-      </ul>
+    <div class="divide">
+      <div class="footer">
+        <div class="footer1">
+          <ul>
+            <p>
+              <strong>Desenvolvimento de Sistemas</strong> <br>
+              SESI SENAI CTAI <br>
+              Rodovia SC-401, 3730 - Saco Grande, Florianópolis - SC, 88032005
+            </p>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer2">
+          <ul>
+            <p>
+              <strong>Igor Luiz Belter Rosiak</strong> <br>
+              Contato: 48 996449750 <br>
+              Email: Igorluizbelterrosiak@gmail.com
+            </p>
+          </ul>
+        </div>
+      </div>
+      </div>
     </div>
   </footer>
 
@@ -67,4 +77,5 @@
   <script src="./bootstrap-5.0.0/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

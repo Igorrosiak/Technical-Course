@@ -10,4 +10,19 @@ public class IndexController {
     public String index(){
         return "index";
     }
+
+    @GetMapping("/equipe")
+    public String equipe(){
+        return "equipe";
+    }
+
+    @GetMapping("/clientes")
+    public String clientes(){
+        return "clientes";
+    }
+
+    @GetMapping("/projetos")
+    public String projetos(){
+        return "projetos";
+    }
 }
