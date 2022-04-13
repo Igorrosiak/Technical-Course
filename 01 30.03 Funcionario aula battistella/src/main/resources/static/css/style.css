@@ -10,56 +10,24 @@ body{
 header{
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-bottom: 1em;
-}
-
-.navbar-brand{
-    margin-left: 28.5em;
-}
-
-.head_nav{
     background-color: azure;
+    padding: 1em;
 }
 
-.container{
-    text-align: center;
-    margin-bottom: 4em;
-}
-
-.imgindex{
-    margin-top: 2em;
-}
-
-.divide{
-    width: 100%;
-    height: 7em;
-}
-
-.footer{
-    background-color: azure;
-    width: 50%;
+nav{
     display: flex;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 1em;
+    margin-bottom: 2em;
 }
 
-.footer1{
-    margin-top: 1em;
+main > img{
+    width: 22em;
+    height: 26em;
     text-align: center;
 }
 
-.footer2{
-    margin-top: 1em;
-    text-align: center;
-}
-
-h1{
+main > h1{
     color: #E9F1F7;
     text-align: center;
     margin-top: 0.7em;
-}
-
-.minhaft{
-    width: 22em;
-    height: 26em;
-    margin-top: 1em;
 }
