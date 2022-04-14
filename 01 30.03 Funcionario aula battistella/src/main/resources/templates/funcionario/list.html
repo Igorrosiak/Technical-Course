@@ -5,35 +5,73 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./bootstrap-5.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="../bootstrap-5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
   <title>Funcionário</title>
 </head>
 
 <body>
 
   <header>
-    <h2>Gerenciador de Projetos</h2>
+    <h1>Gerenciador de Projetos</h1>
   </header>
 
   <nav>
-      <ul>
-        <li>
-          <a href="/funcionario/list">Página Inicial</a>
-        </li>
-        <li>
-          <a href="/clientes" class="bold">Clientes</a>
-        </li>
-        <li>
-          <a href="/projetos">Projetos</a>
-        </li>
-        <li>
-          <a href="/equipe">Equipe Desenvolvedora</a>
-        </li>
-      </ul>
+    <ul>
+      <li>
+        <a href="/index">Página Inicial</a>
+      </li>
+      <li>
+        <a href="/clientes" class="bold">Clientes</a>
+      </li>
+      <li>
+        <a href="/projetos">Projetos</a>
+      </li>
+      <li>
+        <a href="/equipe">Equipe Desenvolvedora</a>
+      </li>
+      <li>
+        <a href="/funcionario/list">List</a>
+      </li>
+    </ul>
   </nav>
 
-  <img src="./img/gerente.png" class="imgindex">
+  <main>
+    <h1>Lista de Funcionarios</h1>
+
+    <div id="tabela">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Primeiro</th>
+            <th scope="col">Último</th>
+            <th scope="col">Nickname</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
 
   <footer>
     <ul>
@@ -43,14 +81,14 @@
     </ul>
 
     <ul>
-      <strong>Igor Luiz Belter Rosiak</strong> <br>
+      <p><strong>Igor Luiz Belter Rosiak</strong></p>
       <p>Contato: 48 996449750</p>
       <p>Email: Igorluizbelterrosiak@gmail.com</p>
     </ul>
   </footer>
 
-  <script src="./js/popper.min.js"></script>
-  <script src="./bootstrap-5.0.0/js/bootstrap.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../bootstrap-5.0.0/js/bootstrap.min.js"></script>
 
 </body>
 
