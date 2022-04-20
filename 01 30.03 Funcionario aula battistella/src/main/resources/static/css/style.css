@@ -1,6 +1,10 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -9,7 +13,6 @@ body{
 
 header{
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: azure;
     padding: 1em;
 }
@@ -27,7 +30,6 @@ nav > ul{
 nav > ul > li{
     display: block;
     margin-left: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav a{
@@ -36,29 +38,32 @@ nav a{
 }
 
 main > div{
-    padding-top: 1em;
+    padding-top: 2em;
     width: 50%;
-    display: block;
+    display: flex;
     margin: auto;
 }
 
 main > div > img{
+    max-width: 400px;
     width: 100%;
+    display: block;
+    margin: 0 0 0 10px;
 }
 
 main > h1{
     color: #E9F1F7;
     text-align: center;
-    margin-top: 0.7em;
+    margin-top: 2em;
 }
 
-main > div > p{
-    width: 100%;
+main > p{
+    width: 50%;
     text-align: justify;
     text-indent: 1em;
     color: white;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    padding-top: 1em;
+    margin: auto;
 }
 
 .imgequipe{
@@ -74,7 +79,7 @@ div.imgequipe > img{
 
 div#tabela{
     min-width: 300px;
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
     margin: auto;
     padding-top: 1em;
