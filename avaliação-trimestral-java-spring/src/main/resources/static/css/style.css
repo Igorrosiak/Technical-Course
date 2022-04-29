@@ -1,0 +1,97 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, #241515, #1b100f);
+}
+
+header{
+    text-align: center;
+    background-color: azure;
+    padding: 1em;
+}
+
+nav{
+    background-color: azure;
+    padding-bottom: 1px
+}
+
+nav > ul{
+    display: flex;
+    padding: 0;
+}
+
+nav > ul > li{
+    display: block;
+    margin-left: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+main > div{
+    padding-top: 2em;
+    width: 50%;
+    display: flex;
+    margin: auto;
+}
+
+main > div > img{
+    max-width: 400px;
+    width: 100%;
+    display: block;
+    margin: 0 0 0 10px;
+}
+
+main > h1{
+    color: #E9F1F7;
+    text-align: center;
+    margin-top: 2em;
+}
+
+main > p{
+    width: 50%;
+    text-align: justify;
+    text-indent: 1em;
+    color: white;
+    padding-top: 1em;
+    margin: auto;
+}
+
+.imgequipe{
+    display: flex;
+}
+
+div.imgequipe > img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
+
+div#tabela{
+    min-width: 300px;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    padding-top: 1em;
+}
+
+footer{
+    margin-top: 2em;
+    columns: 2;
+    background-color: azure;
+}
+
+footer > ul{
+    text-align: center;
+    padding-top: 10px;
+}
