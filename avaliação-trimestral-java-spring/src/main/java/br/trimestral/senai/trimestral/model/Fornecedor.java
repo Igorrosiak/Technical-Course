@@ -9,7 +9,7 @@ public class Fornecedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "nome")
     @Size(max = 100)
@@ -22,7 +22,7 @@ public class Fornecedor {
     @Size(max = 30)
     private String telefone;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
     public void setId(long id) {

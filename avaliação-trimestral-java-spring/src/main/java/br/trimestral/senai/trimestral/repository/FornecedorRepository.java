@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface FornecedorRepository extends JpaRepository<Fornecedor, Long> {
 
-    public List<Fornecedor> findByNome(String nome);
-    public List<Fornecedor> findByEmail(String email);
-    public List<Fornecedor> findByTelefoneLike(String telefone);
+    public Fornecedor findByNome(String nome);
+    public Fornecedor findByEmail(String email);
+    public Fornecedor findByTelefoneLike(String telefone);
 
 }
