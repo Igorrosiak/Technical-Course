@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
@@ -52,12 +52,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Igor Rosiak</td>
-            <td>129.329.123.45</td>
-            <td>48-988425637</td>
-            <td>Igorluizbelterrosiak@gmail.com</td>
+          <tr th:each="funcionario:${funcionarios}">
+            <th scope="row" th:text="${funcionario.id}">1</th>
+            <td th:text="${funcionario.nome}">Igor Rosiak</td>
+            <td th:text="${funcionario.CPF}">129.329.123.45</td>
+            <td th:text="${funcionario.telefone}">48-988425637</td>
+            <td th:text="${funcionario.email}">Igorluizbelterrosiak@gmail.com</td>
             <td><a href=""><i class="fi fi-rr-edit"></i></a></td>
             <td><a href=""><i class="fi fi-rs-trash"></i></a></td>
           </tr>
