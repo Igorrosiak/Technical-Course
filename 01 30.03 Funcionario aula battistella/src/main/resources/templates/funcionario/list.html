@@ -31,7 +31,10 @@
         <a href="/equipe">Equipe Desenvolvedora</a>
       </li>
       <li>
-        <a href="/funcionario/list">List</a>
+        <a href="/funcionario/list">Lista</a>
+      </li>
+      <li>
+        <a href="/funcionario/add">Adicionar</a>
       </li>
     </ul>
   </nav>
@@ -48,45 +51,19 @@
             <th scope="col">CPF</th>
             <th scope="col">Telefone</th>
             <th scope="col">E-mail</th>
-            <th scope="col" colspan="2">Edição</th>
+            <th scope="col" colspan="3">Edição</th>
           </tr>
         </thead>
         <tbody>
           <tr th:each="funcionario:${funcionarios}">
-            <th scope="row" th:text="${funcionario.id}">1</th>
-            <td th:text="${funcionario.nome}">Igor Rosiak</td>
-            <td th:text="${funcionario.CPF}">129.329.123.45</td>
-            <td th:text="${funcionario.telefone}">48-988425637</td>
-            <td th:text="${funcionario.email}">Igorluizbelterrosiak@gmail.com</td>
+            <th scope="row" th:text="${funcionario.id}"></th>
+            <td th:text="${funcionario.nome}"></td>
+            <td th:text="${funcionario.cpf}"></td>
+            <td th:text="${funcionario.telefone}"></td>
+            <td th:text="${funcionario.email}"></td>
             <td><a href=""><i class="fi fi-rr-edit"></i></a></td>
             <td><a href=""><i class="fi fi-rs-trash"></i></a></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Gabriela Senna</td>
-            <td>128.345.235.65</td>
-            <td>48-995743245</td>
-            <td>seninha@gmail.com</td>
-            <td><a href=""><i class="fi fi-rr-edit"></i></a></td>
-            <td><a href=""><i class="fi fi-rs-trash"></i></a></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Peterson Silva</td>
-            <td>329.124.453.56</td>
-            <td>49-995443267</td>
-            <td>petinho@gmail.com</td>
-            <td><a href=""><i class="fi fi-rr-edit"></i></a></td>
-            <td><a href=""><i class="fi fi-rs-trash"></i></a></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Anna Laura</td>
-            <td>324.543.679.21</td>
-            <td>48-996452345</td>
-            <td>dieguinhobrabao@gmail.com</td>
-            <td><a href=""><i class="fi fi-rr-edit"></i></a></td>
-            <td><a href=""><i class="fi fi-rs-trash"></i></a></td>
+            <td><a href="/funcionario/add"><i class="fi fi-rr-add"></i></a></td>
           </tr>
         </tbody>
       </table>

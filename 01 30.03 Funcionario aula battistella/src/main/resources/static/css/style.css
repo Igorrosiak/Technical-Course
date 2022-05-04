@@ -8,18 +8,20 @@
 }
 
 body{
-    background-image: linear-gradient(to right, #241515, #1b100f);
+    background-image: linear-gradient(to right, #f0efef, #a8a8a8);
 }
 
 header{
     text-align: center;
-    background-color: azure;
+    background-color: rgb(41, 41, 41);
     padding: 1em;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.404);
+    color: white;
 }
 
 nav{
-    background-color: azure;
-    padding-bottom: 1px
+    background-color: rgb(41, 41, 41);
+    padding-bottom: 1px;
 }
 
 nav > ul{
@@ -34,7 +36,7 @@ nav > ul > li{
 
 nav a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 main > div{
@@ -52,7 +54,7 @@ main > div > img{
 }
 
 main > h1{
-    color: #E9F1F7;
+    color: #000000;
     text-align: center;
     margin-top: 2em;
 }
@@ -61,7 +63,7 @@ main > p{
     width: 50%;
     text-align: justify;
     text-indent: 1em;
-    color: white;
+    color: rgb(0, 0, 0);
     padding-top: 1em;
     margin: auto;
 }
@@ -88,10 +90,35 @@ div#tabela{
 footer{
     margin-top: 2em;
     columns: 2;
-    background-color: azure;
+    background-color: rgb(41, 41, 41);
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.404);
 }
 
 footer > ul{
     text-align: center;
     padding-top: 10px;
+    color: white;
+}
+
+div#form{
+    margin: auto;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.404);
+    padding-bottom: 1em;
+}
+
+div#form > label{
+    display: block;
+}
+
+div#form > button{
+    display: block;
+    margin: 1em auto 0 auto;
+    
+    background-color: white;
+
 }
