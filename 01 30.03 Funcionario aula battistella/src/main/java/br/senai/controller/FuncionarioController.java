@@ -34,6 +34,12 @@ public class FuncionarioController {
         return "funcionario/edit";
     }
 
+    @GetMapping("/funcionario/delete/{id}")
+    public String delete(Model model, @PathVariable long id){
+        model.addAttribute("funcionario",funcionarioService.delete(funcionarioService.findById(id)));
+        return"funcionario/delete";
+    }
+
     @PostMapping("/funcionario/save")
     public String save(Funcionario funcionario, Model model){
         try {
