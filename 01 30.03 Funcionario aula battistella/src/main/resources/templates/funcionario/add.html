@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../bootstrap-5.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">
-  <title>Funcionário</title>
+  <title>Gerência de Projetos</title>
 </head>
 
 <body>
@@ -42,18 +42,39 @@
   <main>
     <h1>Adicionar Funcionarios</h1>
 
+    <div th:if="${isSaved}" class="alert alert-success">
+      <h4>Operação realizada com sucesso!</h4>
+    </div>
+
+    <div th:if="${isError}" class="alert alert-danger">
+      <h4>Erro ao tentar salvar os dados!</h4>
+      <label th:text="#{errorMsg}"></label>
+    </div>
+
     <div id="form">
 
-        <label for="n">Nome do Funcionário</label>
-        <input type="text" id="n">
-        <label for="c">CPF do Funcionário</label>
-        <input type="text" id="c">
-        <label for="e">Email do Funcionário</label>
-        <input type="text" id="e">
-        <label for="t">Telefone do Funcionário</label>
-        <input type="text" id="t">
+      <form th:action="@{/funcionario/save}" method="post" class="formulario" th:object="${funcionario}">
+        
+        <label for="floatingInputId">Código</label>
+        <input type="number" id="floatingInputId" th:field="*{id}" readonly placeholder="Código">
 
-        <button onclick="Enviar()">Enviar</button>
+        <label for="floatingInputNome">Nome</label>
+        <input type="text" id="floatingInputNome" th:field="*{nome}" placeholder="Nome" required>
+        
+        <label for="floatingInputCpf">CPF</label>
+        <input type="text" id="floatingInputCpf" th:field="*{cpf}" placeholder="CPF" required>
+      
+        <label for="floatingInputEmail">Email</label>
+        <input type="email" id="floatingInputEmail" th:field="*{email}" placeholder="E-mail" required>
+
+        <label for="floatingInputTelefone">Telefone</label>
+        <input type="text" id="floatingInputTelefone" th:field="*{telefone}" placeholder="Telefone" required>
+
+        <button type="submit">Salvar</button>
+        <button type="button" onclick="window.location.href='./list'">
+        Cancelar
+        </button>
+      </form>
     </div>
 
 
@@ -74,9 +95,9 @@
     </ul>
   </footer>
 
+  <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../bootstrap-5.0.0/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

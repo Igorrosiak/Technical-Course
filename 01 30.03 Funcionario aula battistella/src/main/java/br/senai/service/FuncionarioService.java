@@ -10,5 +10,5 @@ public interface FuncionarioService {
     public Funcionario findById(Long id);
     public Funcionario findByNome(String Nome);
     public Funcionario save(Funcionario funcionario);
-//    public Funcionario delete(Funcionario funcionario);
+    public void deleteById(Long id);
 }

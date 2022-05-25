@@ -34,12 +34,6 @@ public class FuncionarioController {
         return "funcionario/edit";
     }
 
-//    @GetMapping("/funcionario/delete/{id}")
-//    public String delete(Model model, @PathVariable long id){
-//        model.addAttribute("funcionario",funcionarioService.delete(funcionarioService.findById(id)));
-//        return"funcionario/delete";
-//    }
-
     @PostMapping("/funcionario/save")
     public String save(Funcionario funcionario, Model model){
         try {
@@ -53,5 +47,15 @@ public class FuncionarioController {
             model.addAttribute("errorMsg", e.getMessage());
             return "funcionario/add";
         }
+    }
+
+    @GetMapping("/funcionario/delete/{id}")
+    public String delete(@PathVariable long id){
+        try{
+            funcionarioService.deleteById(id);
+        } catch (Exception e){
+            System.out.println("Erro: " + e.getMessage());
+        }
+        return "redirect:/funcionario/list";
     }
 }
