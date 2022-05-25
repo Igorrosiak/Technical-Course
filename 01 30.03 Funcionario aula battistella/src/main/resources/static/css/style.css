@@ -118,7 +118,5 @@ div#form > label{
 div#form > button{
     display: block;
     margin: 1em auto 0 auto;
-    
     background-color: white;
-
 }
