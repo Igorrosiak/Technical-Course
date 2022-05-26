@@ -42,15 +42,6 @@
   <main>
     <h1>Adicionar Funcionarios</h1>
 
-    <div th:if="${isSaved}" class="alert alert-success">
-      <h4>Operação realizada com sucesso!</h4>
-    </div>
-
-    <div th:if="${isError}" class="alert alert-danger">
-      <h4>Erro ao tentar salvar os dados!</h4>
-      <label th:text="#{errorMsg}"></label>
-    </div>
-
     <div id="form">
 
       <form th:action="@{/funcionario/save}" method="post" class="formulario" th:object="${funcionario}">
@@ -70,11 +61,21 @@
         <label for="floatingInputTelefone">Telefone</label>
         <input type="text" id="floatingInputTelefone" th:field="*{telefone}" placeholder="Telefone" required>
 
-        <button type="submit">Salvar</button>
-        <button type="button" onclick="window.location.href='./list'">
-        Cancelar
-        </button>
+        <div class="botoes">
+          <button type="button" onclick="window.location.href='./list'" class="vermelho">Cancelar</button>
+          <button type="submit" class="verde">Salvar</button>
+        </div>
+
       </form>
+
+      <div th:if="${isSaved}" class="alert alert-success" style="width: 800px; margin: auto;">
+        <h4>Operação realizada com sucesso!</h4>
+      </div>
+  
+      <div th:if="${isError}" class="alert alert-danger">
+        <h4>Erro ao tentar salvar os dados!</h4>
+        <label th:text="#{errorMsg}"></label>
+      </div>
     </div>
 
 

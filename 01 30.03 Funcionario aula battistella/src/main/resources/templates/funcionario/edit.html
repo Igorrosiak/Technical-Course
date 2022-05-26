@@ -42,7 +42,7 @@
   <main>
     <h1>Editar Funcionarios</h1>
 
-    <div th:if="${isSaved}" class="alert alert-success">
+      <div th:if="${isSaved}" class="alert alert-success" >
         <h4>Operação realizada com sucesso!</h4>         
       </div>
 
@@ -54,7 +54,7 @@
 
       <form th:action="@{/funcionario/save}"
       method="post" class="formulario"
-      th:object="${funcionario}">
+      th:object="${funcionario}" style="max-width: 800px; margin: auto; padding-top: 2em;">
         <div class="form-floating mb-3">
           <input type="number" th:field="${funcionario.id}" readonly class="form-control" id="floatingInputId" placeholder="Código">
           <label for="floatingInputId">Código</label>
@@ -81,12 +81,12 @@
         </div>
 
         <div class="form-floating mb-3">
-          <button type="submit" class="btn btn-success" >Salvar</button>
+          <button type="submit" class="btn btn-success">Salvar</button>
 
           <button type="button" class="btn btn-secondary"
             onclick="window.location.href='../list'">
             Cancelar
-        </button>
+          </button>
         </div>
 
       </form>
