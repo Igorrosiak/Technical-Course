@@ -16,8 +16,7 @@ public class FuncionarioController {
     FuncionarioService funcionarioService;
 
     @GetMapping("/funcionario/list")
-    public String findAll(Model model) {
-        System.out.println(funcionarioService.findAll());
+    public String findAll(Model model){
         model.addAttribute("funcionarios", funcionarioService.findAll());
         return "funcionario/list";
     }

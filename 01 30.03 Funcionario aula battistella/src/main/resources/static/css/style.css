@@ -1,6 +1,8 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
 
+/* <ALL> */
+
 *{
     padding: 0;
     margin: 0;
@@ -39,35 +41,65 @@ nav a{
     color: white;
 }
 
-main > div{
-    padding-top: 2em;
-    width: 50%;
-    display: flex;
-    margin: auto;
+footer{
+    margin-top: 2em;
+    columns: 2;
+    background-color: rgb(41, 41, 41);
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.404);
 }
 
-main > div > img{
-    max-width: 400px;
-    width: 100%;
-    display: block;
-    margin: 0 0 0 10px;
+footer > ul{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
 }
 
 main > h1{
     color: #000000;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
-main > p{
+/* </ALL> */
+
+/* <INDEX> */
+
+main.main > div.imgs_pg_inicial{
+    padding-top: 2em;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+}
+
+main.main > div.imgs_pg_inicial > img{
+    max-width: 400px;
+    width: 100%;
+    display: block;
+    margin: 0 0 0 10px;
+    text-align: center;
+}
+
+main.main > p{
     width: 50%;
     text-align: justify;
     text-indent: 1em;
     color: rgb(0, 0, 0);
-    padding-top: 1em;
+    padding-top: 1.5em;
     margin: auto;
 }
 
+/* </INDEX> */
+
+/* <CLIENTES> */
+
+    
+
+/* </CLIENTES> */
+
+/* <LIST> */
+
+/* </LIST> */
 .imgequipe{
     display: flex;
 }
@@ -81,23 +113,10 @@ div.imgequipe > img{
 
 div#tabela{
     min-width: 300px;
-    max-width: 800px;
+    max-width: 1000px;
     text-align: center;
     margin: auto;
     padding-top: 1em;
-}
-
-footer{
-    margin-top: 2em;
-    columns: 2;
-    background-color: rgb(41, 41, 41);
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.404);
-}
-
-footer > ul{
-    text-align: center;
-    padding-top: 10px;
-    color: white;
 }
 
 div#form{
