@@ -11,19 +11,19 @@
 }
 
 body{
-    background-image: linear-gradient(to right, #84d6bc, #28dac2, rgb(7, 161, 167));
+    background-image: linear-gradient(to right, #ffffff, rgb(255, 232, 232), rgb(255, 214, 214));
 }
 
 header{
     text-align: center;
-    background-color: #000129;
+    background-color: #5c0f0f;
     padding: 1em;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.404);
     color: white;
+    box-shadow: 3px 3px 60px 1px rgb(0, 0, 0);
 }
 
 nav{
-    background-color: #000129;
+    background-color: #5c0f0f;
     padding-bottom: 1px;
 }
 
@@ -40,22 +40,22 @@ nav > ul > li{
 nav a{
     text-decoration: none;
     color: white;
+    padding: 0.4em;
 }
 
 nav a:hover{
     background-color: white;
     border-radius: 10px;
-    color: purple;
-    font-size: 1.1em;
-    padding: 0.4em;
-    transition: 0.5s;
+    color: rgb(121, 0, 0);
+    font-size: 1.01em;
+    transition: 1s;
 }
 
 footer{
     margin-top: 2em;
     columns: 2;
-    background-color: #000129;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.404);
+    background-color: #5c0f0f;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.612);
 }
 
 footer > ul{
@@ -65,7 +65,7 @@ footer > ul{
 }
 
 main > h1{
-    color: #000146;
+    color: #000000;
     text-align: center;
     margin-top: 1em;
 }
@@ -88,6 +88,7 @@ main.main > div.imgs_pg_inicial > img{
     display: block;
     margin: 0 0 0 10px;
     text-align: center;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.471);
 }
 
 main.main > p{
@@ -195,8 +196,8 @@ div#tabela{
     min-width: 300px;
     max-width: 1000px;
     text-align: center;
-    margin: auto;
-    padding-top: 1em;
+    margin: 2em auto 0 auto;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.287);
 }
 
 /* </LIST> */
@@ -242,7 +243,7 @@ div#form > form > div.botoes > button.verde{
 }
 
 div#form > form > div.botoes > button.vermelho{
-    background-color: #b37306;
+    background-color: #c31f1f;
 }
 
 /* </ADD> */
