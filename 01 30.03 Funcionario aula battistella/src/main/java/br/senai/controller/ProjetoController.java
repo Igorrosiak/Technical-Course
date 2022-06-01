@@ -15,36 +15,36 @@ public class ProjetoController {
     @Autowired
     ProjetoService projetoService;
 
-    @GetMapping("/funcionario/list")
+    @GetMapping("/projeto/list")
     public String findAll(Model model){
         model.addAttribute("projetos", projetoService.findAll());
-        return "funcionario/list";
+        return "projeto/list";
     }
 
-    @GetMapping("/funcionario/add")
+    @GetMapping("/projeto/add")
     public String add(Model model) {
         model.addAttribute("projeto", new Projeto());
-        return "funcionario/add";
+        return "projeto/add";
     }
 
-    @GetMapping("/funcionario/edit/{id}")
+    @GetMapping("/projeto/edit/{id}")
     public String edit(Model model, @PathVariable long id) {
         model.addAttribute("funcionario", projetoService.findById(id));
-        return "funcionario/edit";
+        return "projeto/edit";
     }
 
-    @PostMapping("/funcionario/save")
+    @PostMapping("/projeto/save")
     public String save(Projeto projeto, Model model){
         try {
             projetoService.save(projeto);
             model.addAttribute("projeto", projeto);
             model.addAttribute("isSaved", true);
-            return "funcionario/add";
+            return "projeto/add";
         } catch(Exception e){
             model.addAttribute("projeto", projeto);
             model.addAttribute("isError", true);
             model.addAttribute("errorMsg", e.getMessage());
-            return "funcionario/add";
+            return "projeto/add";
         }
     }
 
