@@ -19,17 +19,6 @@ public class ProjetoServiceImpl implements ProjetoService{
     }
 
     @Override
-    public Projeto findByNome(String Nome) {
-        return null;
-    }
-
-    @Override
-    public Projeto findById(Long id){
-        Projeto func = projetoRepository.findById(id).get();
-        return func != null ? func : new Projeto();
-    }
-
-    @Override
     public Projeto save(Projeto projeto){
         try{
             return  projetoRepository.save(projeto);
