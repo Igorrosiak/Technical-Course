@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="https://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap-5.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Projetos</title>
 </head>
 <body>
@@ -23,22 +24,78 @@
         <a href="/clientes" class="bold">Clientes</a>
       </li>
       <li>
-        <a href="/projetos">Projetos</a>
+        <a href="/projeto/list">Projetos</a>
       </li>
       <li>
-        <a href="/equipe">Equipe Desenvolvedora</a>
+        <a href="/equipe">Equipe</a>
       </li>
       <li>
         <a href="/funcionario/list">Lista</a>
       </li>
-      <li>
-        <a href="/funcionario/add">Adicionar</a>
-      </li>
     </ul>
   </nav>
 
-  <main>
-    <h1>Crie seus Projetos conosco.</h1>
+  <main class="projeto">
+
+    <h1>Lista de Projetos</h1>
+
+    <div class="container-projeto">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col" class="data">Data Inicial</th>
+              <th scope="col" class="data">Data Final</th>
+              <th scope="col">Status</th>
+              <th scope="col">Orçamento</th>
+              <th scope="col" colspan="2">
+                <a class="a-novo" href="./add"><i class="fi fi-rr-add"></i></a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="projeto: ${projetos}">
+              <th scope="row" th:text="${projeto.id}"></th>
+              <td th:text="${projeto.nome}"></td>
+              <td th:text="${#dates.format(projeto.dataInicial,'dd-MM-yyyy')}"></td>
+              <td th:text="${#dates.format(projeto.dataFinal,'dd-MM-yyyy')}"></td>
+              <td th:text="${projeto.status}"></td>
+              <td th:text="${'R$' + #numbers.formatDecimal(projeto.orcamento,1,'DEFAULT', 2, 'DEFAULT')}"></td>
+              <td scope="col"><a class="a-edit" th:href="@{'./edit/' + ${projeto.id}}">
+                <i class="fi fi-rr-edit"></i></a></td>
+              <td scope="col"><a class="a-delete" 
+                th:onclick="|showModalDeletar('projeto', ${projeto.id})|">
+                <i class="fi fi-rs-trash"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+  <div class="modal" tabindex="-1" id="modalDeletar">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Atenção</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Você realmente deseja deletar o registro?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" 
+            class="btn btn-danger"
+            th:onclick="deletar()"
+          >
+            Deletar
+          </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </main>
 
   <footer>
@@ -55,8 +112,9 @@
     </ul>
   </footer>
     
-      <script src="./js/popper.min.js"></script>
-      <script src="./bootstrap-5.0.0/js/bootstrap.min.js"></script>
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../bootstrap-5.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>

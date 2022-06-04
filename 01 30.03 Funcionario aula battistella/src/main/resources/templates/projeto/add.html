@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../bootstrap-5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Gerência de Projetos</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Adicionar Projetos</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="/index">Página Inicial</a>
+      </li>
+      <li>
+        <a href="/clientes" class="bold">Clientes</a>
+      </li>
+      <li>
+        <a href="/projeto/list">Projetos</a>
+      </li>
+      <li>
+        <a href="/equipe">Equipe</a>
+      </li>
+      <li>
+        <a href="/funcionario/list">Lista</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+      <div class="div-title">
+          <h2>Projeto</h2>
+      </div>
+
+      <div th:if="${isSaved}" class="alert alert-success">
+        <h4>Operação realizada com sucesso!</h4>         
+      </div>
+
+      <div th:if="${isError}" class="alert alert-danger">
+        <h4>Erro ao tentar salvar os dados!</h4>
+        <label th:text="#{errorMsg}"></label>
+      </div>
+
+
+      <form th:action="@{/projeto/save}"
+      method="post" class="formulario"
+      th:object="${projeto}">
+        <div class="form-floating mb-3">
+          <input type="number" th:field="*{id}" readonly class="form-control" id="floatingInputId" placeholder="Código">
+          <label for="floatingInputId">Código</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" th:field="*{nome}" class="form-control" id="floatingInputNome" placeholder="Nome" required>
+          <label for="floatingInputNome">Nome</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <select class="form-select" aria-label="Selecionar status"
+                  th:field="*{status}" required
+                  id="floatingInputStatus"
+          >
+            <option value="Em Planejamento">Em Planejamento</option>
+            <option value="Em Análise">Em Análise</option>
+            <option value="Em Execução">Em Execução</option>
+            <option value="Finalizado">Finalizado</option>
+            <option value="Cancelado">Cancelado</option>
+          </select>
+          <label for="floatingInputStatus">Status</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="date" th:field="*{dataInicial}" class="form-control" id="floatingInputDataInicial" placeholder="Data Inicial" required>
+          <label for="floatingInputDataInicial">Data Inicial</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="date" th:field="*{dataFinal}" class="form-control" id="floatingInputDataFinal" placeholder="Data Final" required>
+          <label for="floatingInputDataFinal">Data Final</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="number" th:field="*{orcamento}" class="form-control"
+                 id="floatingInputOrcamento" placeholder="Orçamento" required>
+          <label for="floatingInputOrcamento">Orçamento</label>
+        </div>
+
+        <div class="div-funcionarios">
+          <label for="floatingInputFuncinarios">Lista de Funcionários</label>
+          <select class="form-select" aria-label="Selecionar funcionáros"
+                  th:field="*{funcionarios}" required
+                  id="floatingInputFuncinarios"
+                  multiple
+                  size="10"
+          >
+            <option th:each="fn : ${funcionarios}"
+                    th:value=${fn.id}
+                    th:text="${fn.nome}"
+            ></option>
+          </select>
+        </div>
+
+        <div class="form-floating mb-3 botoes">
+          <button type="submit" class="btn btn-success" >Salvar</button>
+          <button type="button" class="btn btn-secondary"
+            onclick="window.location.href='./list'">
+            Cancelar
+        </button>
+        </div>
+
+      </form>
+      
+  </div>
+
+  <footer>
+    <ul>
+      <p><strong>📈 Desenvolvimento de Sistemas 📈</strong></p> 
+      <p>SESI SENAI CTAI</p>
+      <p>Rodovia SC-401, 3730 - Saco Grande, Florianópolis - SC, 88032005</p>
+    </ul>
+
+    <ul>
+      <p><strong>🔥 Igor Luiz Belter Rosiak 🔥</strong></p>
+      <p>Contato: 48 996449750</p>
+      <p>Email: Igorluizbelterrosiak@gmail.com</p>
+    </ul>
+  </footer>
+  
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../bootstrap-5.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

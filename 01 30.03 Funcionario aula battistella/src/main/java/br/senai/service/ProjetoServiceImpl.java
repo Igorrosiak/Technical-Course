@@ -19,6 +19,11 @@ public class ProjetoServiceImpl implements ProjetoService{
     }
 
     @Override
+    public Projeto findById(Long id){
+        Projeto findProjeto = projetoRepository.findById(id).get();
+        return findProjeto != null ? findProjeto : new Projeto();
+    }
+    @Override
     public Projeto save(Projeto projeto){
         try{
             return  projetoRepository.save(projeto);

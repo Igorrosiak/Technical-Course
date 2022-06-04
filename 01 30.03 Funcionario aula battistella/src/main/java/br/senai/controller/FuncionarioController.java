@@ -14,7 +14,6 @@ public class FuncionarioController {
 
     @Autowired
     FuncionarioService funcionarioService;
-
     @GetMapping("/funcionario/list")
     public String findAll(Model model){
         model.addAttribute("funcionarios", funcionarioService.findAll());

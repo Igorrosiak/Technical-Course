@@ -30,16 +30,17 @@ nav{
 nav > ul{
     display: flex;
     padding: 0;
+    justify-content: center;
 }
 
 nav > ul > li{
     display: block;
-    margin-left: 20px;
 }
 
 nav a{
     text-decoration: none;
     color: white;
+    margin-left: 0.4em;
     padding: 0.4em;
 }
 
@@ -49,6 +50,12 @@ nav a:hover{
     color: rgb(121, 0, 0);
     font-size: 1.01em;
     transition: 1s;
+}
+
+main > h1{
+    color: #000000;
+    text-align: center;
+    margin-top: 1em;
 }
 
 footer{
@@ -62,12 +69,6 @@ footer > ul{
     text-align: center;
     padding-top: 10px;
     color: white;
-}
-
-main > h1{
-    color: #000000;
-    text-align: center;
-    margin-top: 1em;
 }
 
 /* </ALL> */
@@ -188,9 +189,26 @@ div.imgs_equipe > div.membro > p{
 
 /* <PROJETOS> */
 
+main.projeto table{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: 2em auto 0 auto;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.287);
+}
+
+div.div-title{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+div.botoes{
+    margin-top: 1em;
+}
+
 /* </PROJETOS> */
 
-/* <LIST> */
+/* <FUNCIONARIOS LIST> */
 
 div#tabela{
     min-width: 300px;
