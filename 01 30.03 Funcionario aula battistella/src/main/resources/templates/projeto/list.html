@@ -30,7 +30,7 @@
         <a href="/equipe">Equipe</a>
       </li>
       <li>
-        <a href="/funcionario/list">Lista</a>
+        <a href="/funcionario/list">Funcionários</a>
       </li>
     </ul>
   </nav>
@@ -56,18 +56,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr th:each="projeto: ${projetos}">
+            <tr th:each="projeto:${projetos}">
               <th scope="row" th:text="${projeto.id}"></th>
               <td th:text="${projeto.nome}"></td>
               <td th:text="${#dates.format(projeto.dataInicial,'dd-MM-yyyy')}"></td>
               <td th:text="${#dates.format(projeto.dataFinal,'dd-MM-yyyy')}"></td>
               <td th:text="${projeto.status}"></td>
               <td th:text="${'R$' + #numbers.formatDecimal(projeto.orcamento,1,'DEFAULT', 2, 'DEFAULT')}"></td>
-              <td scope="col"><a class="a-edit" th:href="@{'./edit/' + ${projeto.id}}">
-                <i class="fi fi-rr-edit"></i></a></td>
-              <td scope="col"><a class="a-delete" 
-                th:onclick="|showModalDeletar('projeto', ${projeto.id})|">
-                <i class="fi fi-rs-trash"></i></a></td>
+              <td scope="col"><a class="a-edit" th:href="@{'./edit/' + ${projeto.id}}"><i class="fi fi-rr-edit"></i></a></td>
+              <td scope="col"><a th:onclick="|showModalDeletar('projeto', ${projeto.id})|"><i class="fi fi-rs-trash"></i></a></td>
             </tr>
           </tbody>
         </table>
@@ -115,6 +112,7 @@
   <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../bootstrap-5.0.0/js/bootstrap.min.js"></script>
+  <script src="../js/script.js"></script>
 
 </body>
 </html>

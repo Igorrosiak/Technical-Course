@@ -31,7 +31,7 @@
         <a href="/equipe">Equipe</a>
       </li>
       <li>
-        <a href="/funcionario/list">Lista</a>
+        <a href="/funcionario/list">Funcionários</a>
       </li>
     </ul>
   </nav>
@@ -49,7 +49,6 @@
         <h4>Erro ao tentar salvar os dados!</h4>
         <label th:text="#{errorMsg}"></label>
       </div>
-
 
       <form th:action="@{/projeto/save}"
       method="post" class="formulario"
