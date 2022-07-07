@@ -26,16 +26,27 @@ public class UsuarioServiceImpl implements UsuarioService{
 
     @Override
     public Usuario create(Usuario newUsuario) {
-        return null;
+        return usuarioRepository.save(newUsuario);
     }
 
     @Override
     public Usuario update(Usuario updatedUsuario, Long id) {
-        return null;
+        Optional<Usuario> uAuxiliar = usuarioRepository.findById(id);
+        if (uAuxiliar.isEmpty()){
+            return null;
+        }
+
+        uAuxiliar.get().setNome(updatedUsuario.getNome());
+        uAuxiliar.get().setUsername(updatedUsuario.getUsername());
+        uAuxiliar.get().setSenha(updatedUsuario.getSenha());
+        uAuxiliar.get().setEmail(updatedUsuario.getEmail());
+        uAuxiliar.get().setDataNasc(updatedUsuario.getDataNasc());
+        return usuarioRepository.save(uAuxiliar.get());
+
     }
 
     @Override
     public void deleteById(Long id) {
-
+        usuarioRepository.deleteById(id);
     }
 }
