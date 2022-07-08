@@ -1,0 +1,92 @@
+-- CREATE TABLE cliente(
+-- 	id serial PRIMARY KEY,
+-- 	nome varchar(50) NOT NULL,
+-- 	email varchar(50),
+-- 	uf varchar(50) NOT NULL,
+-- 	cidade varchar(50) NOT NULL,
+-- 	logradouro varchar(50) NOT NULL,
+-- 	numero int NOT NULL,
+-- 	complemento varchar(50)
+-- );
+
+-- CREATE TABLE categoria(
+-- 	id serial PRIMARY KEY,
+-- 	nome varchar(50) NOT NULL
+-- );
+
+-- CREATE TABLE produto(
+-- 	id serial PRIMARY KEY,
+-- 	id_categoria int,
+-- 	nome varchar(50) NOT NULL,
+-- 	preco float NOT NULL,
+-- 	FOREIGN KEY (id_categoria) REFERENCES categoria(id)
+-- );
+
+-- CREATE TABLE pedido(
+-- 	id serial PRIMARY KEY,
+-- 	id_cliente int NOT NULL,
+-- 	id_produto int NOT NULL,
+-- 	data_compra date NOT NULL,
+-- 	data_entrega date NOT NULL,
+-- 	FOREIGN KEY (id_cliente) REFERENCES cliente(id),
+-- 	FOREIGN KEY (id_produto) REFERENCES produto(id)
+-- );
+
+-- CREATE TABLE entrega(
+-- 	id serial NOT NULL PRIMARY KEY,
+-- 	id_pedido int NOT NULL,
+-- 	id_cliente int NOT NULL
+-- );
+
+-- INSERT INTO cliente (nome, email, uf, cidade, logradouro, numero, complemento)
+-- 	VALUES
+-- 	('Igor Rosiak', 'igorluizbelterrosiak@gmail.com', 'SC', 'Florianópolis', 'Braulina Machado', 51, 'Casa'),
+-- 	('Victória Rufino Faustino', 'victoriarufinofaustino@gmail.com', 'RO', 'Ji-Paraná', 'Santo Antônio', 1227, 'Bloco 10'),
+-- 	('Penélope Chaves Lacerda', 'penelopechaveslacerda@gmail.com', 'PB', 'Patos', 'José Bonifácio', 259, 'Quadra 7'),
+-- 	('Francesco Penha Milheiriço', 'francescopenhamilheirico@gmail.com', 'PB', 'João Pessoa', 'Boa Vista', 7287, 'Cobertura 5'),
+-- 	('Naiara Liberato Vidigal', 'naiaraliberatovidigal@gmail.com', 'CE', 'Sobral', 'Vinte e Três', 895, 'Andar 6'),
+-- 	('Mia Rosa Vilariça', 'miarosavilarica@gmail.com', 'PE', 'Caruaru', 'Vinte e Um', 7957, 'Galpão 5'),
+-- 	('Amina Porciúncula Carlos', 'aminaporciunculacarlos@gmail.com', 'PR', 'São José dos Pinhais', 'Treze', 5937, 'Casa 7'),
+-- 	('Armando Sequeira Trindade', 'armandosequeiratrindade@gmail.com', 'PB', 'João Pessoa', 'Santos Dumont', 4271, 'Casa 5'),
+-- 	('Haniela Simas Gois', 'hanielasimasgois@gmail.com', 'RR', 'Boa Vista', 'Vinte e Um', 5962, 'Cobertura 8'),
+-- 	('Máximo Sousa Noronha', 'maximosousanoronha@gmail.com', 'PI', 'Parnaíba', 'Piauí', 5478, 'Galpão 1'),
+-- 	('Jonas Bonito Fortunato', 'jonasbonitofortunato@gmail.com', 'PR', 'Piraquara', 'Brasil', 6019, 'Anexo 3'),
+-- 	('Artyom Vidal Raminhos', 'artyomvidalraminhos@gmail.com', 'SE', 'Aracaju', 'Bela Vista', 179, 'Terreo 9'),
+-- 	('Dérick Cotrim Freire', 'derickcotrimfreire@gmail.com', 'RO', 'Ji-Paraná', 'São Paulo', 7497, 'Aeroporto 1'),
+-- 	('Ândria Andrade Maranhão', 'andriaandrademaranhao@gmail.com', 'MS', 'Dourados', 'Rui Barbosa', 5587, 'Apartamento 2'),
+-- 	('Evan Corte-Real Filipe', 'evancorterealfilipe@gmail.com', 'SC', 'Itajaí', 'São Jorge', 1822, 'Galeria 6'),
+-- 	('Mariano Félix Casqueira', 'marianofelixcasqueira@gmail.com', 'MS', 'Três Lagoas', 'Bela Vista', 9834, 'Bloco 1'),
+-- 	('Olga Alvelos Bouças', 'olgaalvelosboucas@gmail.com', 'AP', 'Santana', 'Belo Horizonte', 51, 'Casa'),
+-- 	('Nadine Valadão Meira', 'nadinevaladaomeira@gmail.com', 'PB', 'Patos', 'São Jorge', 3652, 'Cobertura 5'),
+-- 	('Maitê Santarém Aguiar', 'maitesantaremaguiar@gmail.com', 'BA', 'Teixeira de Freitas', 'Goiás', 8945, 'Andar 7'),
+-- 	('Cristóvão Braga Moreno', 'cristovaobragamoreno@gmail.com', 'AP', 'Macapá', 'Doze', 6004, 'Quadra 3'),
+-- 	('Jonas Pequeno Leal', 'jonaspequenoleal@gmail.com', 'PB', 'Patos', 'Sergipe', 5843, 'Loja 8'),
+-- 	('Oséias Lobato Pinheiro', 'oseiaslobatopinheiro@gmail.com', 'ES', 'Aracruz', 'das Flores', 940, 'Fazenda 3'),
+-- 	('Elói Marques Fernandes', 'eloimarquesfernandes@gmail.com', 'ES', 'São Mateus', 'Vinte e Três', 9035, 'Fundos 6'),
+-- 	('Raphaël Gaspar Rijo', 'raphaalgasparrijo@gmail.com', 'PR', 'Ponta Grossa', 'Santa Catarina', 8822, 'Fundos 2'),
+-- 	('Celina Nunes Porto', 'celinanunesporto@gmail.com', 'MS', 'Corumbá', 'Paraná', 9781, 'Aeroporto 5');
+					
+-- INSERT INTO categoria (nome)
+-- 	VALUES
+-- 	('Vinho Tinto'),
+-- 	('Vinho Branco'),
+-- 	('Whisky'),
+-- 	('Refrigerante'),
+-- 	('Cerveja'),
+-- 	('Vodka'),
+-- 	('Espumante'),
+-- 	('Licor'),
+-- 	('Cachaça'),
+-- 	('Tequila'),
+-- 	('Sucos'),
+-- 	('Água'),
+-- 	('Leites Fermentados'),
+-- 	('Achocolatados'),
+-- 	('Leite'),
+-- 	('Destilados'),
+-- 	('Caipirinha'),
+-- 	('Saquê'),
+-- 	('Energético'),
+-- 	('Gin'),
+-- 	('Rum');
+	
