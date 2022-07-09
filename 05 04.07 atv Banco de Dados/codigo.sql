@@ -1,3 +1,6 @@
+-- DROP TABLE IF EXISTS pedido;
+-- DROP TABLE IF EXISTS entrega;
+
 -- CREATE TABLE cliente(
 -- 	id serial PRIMARY KEY,
 -- 	nome varchar(50) NOT NULL,
@@ -26,8 +29,8 @@
 -- 	id serial PRIMARY KEY,
 -- 	id_cliente int NOT NULL,
 -- 	id_produto int NOT NULL,
+-- 	quantidade int,
 -- 	data_compra date NOT NULL,
--- 	data_entrega date NOT NULL,
 -- 	FOREIGN KEY (id_cliente) REFERENCES cliente(id),
 -- 	FOREIGN KEY (id_produto) REFERENCES produto(id)
 -- );
@@ -35,7 +38,7 @@
 -- CREATE TABLE entrega(
 -- 	id serial NOT NULL PRIMARY KEY,
 -- 	id_pedido int NOT NULL,
--- 	id_cliente int NOT NULL
+-- 	data_entrega date NOT NULL
 -- );
 
 -- INSERT INTO cliente (nome, email, uf, cidade, logradouro, numero, complemento)
@@ -89,4 +92,121 @@
 -- 	('Energético'),
 -- 	('Gin'),
 -- 	('Rum');
-	
+
+-- INSERT INTO produto (id_categoria, nome, preco)
+-- 	VALUES (3, 'White Horse', 70),
+-- 	(3, 'Drury´s', 35),
+-- 	(3, 'Red Label', 80),
+-- 	(3, 'Black Label', 35),
+-- 	(3, 'Chivas 12', 180),
+-- 	(3, 'Ballantines', 65),
+-- 	(3, 'Chivas 18', 500),
+-- 	(4, 'Coca Cola 2L', 8),
+-- 	(4, 'Fanta 2L', 7),
+-- 	(4, 'Guaraná Antartica 2L', 7),
+-- 	(4, 'Pepsi 2L', 7),
+-- 	(4, 'Sukita 2L', 6),
+-- 	(5, 'Skol Long Neck', 8),
+-- 	(5, 'Brahma Long Neck', 8),
+-- 	(5, 'Corona Long Neck', 12),
+-- 	(5, 'Heineken Long Neck', 12),
+-- 	(5, 'Budweiser Long Neck', 10),
+-- 	(5, 'Stella Long Neck', 10),
+-- 	(6, 'Natasha', 7),
+-- 	(6, 'Absolut', 80),
+-- 	(6, 'Orloff', 35),
+-- 	(6, 'Smirnoff', 40),
+-- 	(7, 'Veuve Cliqueot', 400),
+-- 	(9, 'Velho Barreiro', 10),
+-- 	(9, '51', 9),
+-- 	(10, 'José Cuervo Ouro', 80),
+-- 	(10, 'José Cuervo Prata', 90),
+-- 	(11, 'Del Valle Uva', 10),
+-- 	(11, 'Del Valle Pessêgo', 10),
+-- 	(11, 'Del Valle Laranja', 10),
+-- 	(11, 'Del Valle Morango', 10),
+-- 	(12, 'Água da Fonte', 3),
+-- 	(14, 'Toddynho', 6),
+-- 	(15, 'Tirol', 4),
+-- 	(17, 'Caipirinha Limão', 20),
+-- 	(17, 'Caipirinha Morango', 20),
+-- 	(17, 'Caipirinha de Corona', 25),
+-- 	(19, 'Baly 1L', 8),
+-- 	(19, 'Red Bull 255ml', 6),
+-- 	(19, 'Monster 500ml', 8),
+-- 	(20, 'Gin Rock´s', 35),
+-- 	(20, 'Beffeater', 70),
+-- 	(20, 'Bombay Sapphire', 150),
+-- 	(21, 'Montilla', 40),
+-- 	(21, 'Bacardi Carta Blanca', 50),
+-- 	(21, 'Barcardi Maçã Verde', 60);
+
+-- INSERT INTO pedido (id_cliente, id_produto, data_compra, quantidade)
+-- 	VALUES
+-- 	(1, 2, '2022-07-08', 3),
+-- 	(2, 3, '2022-07-08', 1),
+-- 	(3, 3, '2022-07-08', 2),
+-- 	(4, 4, '2022-07-08', 5),
+-- 	(5, 5, '2022-07-08', 6),
+-- 	(6, 6, '2022-07-08', 1),
+-- 	(7, 7, '2022-07-08', 1),
+-- 	(8, 9, '2022-07-07', 2),
+-- 	(9, 10, '2022-07-07', 4),
+-- 	(10, 11, '2022-07-07', 3),
+-- 	(11, 15, '2022-07-07', 3),
+-- 	(12, 16, '2022-07-07', 5),
+-- 	(13, 17, '2022-07-07', 5),
+-- 	(14, 18, '2022-07-07', 4),
+-- 	(15, 19, '2022-07-07', 2),
+-- 	(16, 20, '2022-07-07', 1),
+-- 	(17, 21, '2022-07-06', 1),
+-- 	(18, 22, '2022-07-06', 2),
+-- 	(19, 23, '2022-07-06', 4),
+-- 	(20, 24, '2022-07-06', 3);
+
+-- INSERT INTO entrega (id_pedido, data_entrega)
+-- 	VALUES
+-- 	(1, '2022-07-09'),
+-- 	(2, '2022-07-09'),
+-- 	(3, '2022-07-09'),
+-- 	(4, '2022-07-09'),
+-- 	(5, '2022-07-09'),
+-- 	(6, '2022-07-09'),
+-- 	(7, '2022-07-09'),
+-- 	(8, '2022-07-09'),
+-- 	(9, '2022-07-10'),
+-- 	(10, '2022-07-10'),
+-- 	(11, '2022-07-10'),
+-- 	(12, '2022-07-10'),
+-- 	(13, '2022-07-11'),
+-- 	(14, '2022-07-11'),
+-- 	(15, '2022-07-11'),
+-- 	(16, '2022-07-11'),
+-- 	(17, '2022-07-11'),
+-- 	(18, '2022-07-11'),
+-- 	(19, '2022-07-12'),
+-- 	(20, '2022-07-12');
+
+-- SELECT * FROM cliente
+-- WHERE "uf" = 'PB';
+
+-- SELECT * FROM cliente
+-- WHERE "complemento" LIKE '%Casa%';
+
+-- SELECT * FROM produto
+-- WHERE "id_categoria" = 3 OR "id_categoria" = 5
+
+-- SELECT * FROM produto
+-- WHERE "preco" >= 35
+
+-- SELECT * FROM pedido
+-- WHERE "quantidade" > 3
+
+-- SELECT * FROM pedido
+-- WHERE "data_compra" = '2022-07-08'
+
+-- SELECT * FROM pedido
+-- WHERE "id_produto" = 3
+
+-- SELECT * FROM entrega
+-- WHERE "data_entrega" = '2022-07-09'
