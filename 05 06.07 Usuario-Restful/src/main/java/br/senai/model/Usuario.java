@@ -1,12 +1,10 @@
 package br.senai.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Entity(name = "usuario")
 public class Usuario {
@@ -31,6 +29,9 @@ public class Usuario {
 
     @Size(max = 100)
     private String email;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Tarefa> tarefas;
 
     public Long getId() {
         return id;
@@ -68,16 +69,23 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
+    public List<Tarefa> getTarefas() {
+        return tarefas;
+    }
+    public void setTarefas(List<Tarefa> tarefas) {
+        this.tarefas = tarefas;
+    }
 
     @Override
     public String toString() {
-        return "Usuario: " +
+        return "Usuario{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", username='" + username + '\'' +
                 ", senha='" + senha + '\'' +
                 ", dataNasc=" + dataNasc +
                 ", email='" + email + '\'' +
+                ", tarefas=" + tarefas +
                 '}';
     }
 }
